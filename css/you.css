@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+.sidebar{
+	position: fixed;
+	width: 250px;
+	height: 100vh;
+	left: -250px;
+	background: #063156;
+	/*background: #334fa5;*/
+	transition: .7s;
+}
+.sidebar header{
+	font-size: 22px;
+	text-align: center;
+	color: #fff;
+	line-height: 70px;
+	background: #063156;
+	user-select: none;
+}
+.sidebar ul a{
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 65px;
+	font-size: 20px;
+	color: #fff;
+	padding-left: 40px;
+	box-sizing: border-box;
+	border-top: 1px solid rgba(255, 255, 255, .1), rgba(255, 255, 255, .1);
+	border-bottom: 1px solid #555;
+	transition: .4s;
+}
+ul li:hover a{
+	padding-left: 50px;
+}
+
+i{
+	margin-right: 16px;
+	color: red;
+}
+
+#check{
+	display: none;
+}
+label #bar, label #time{
+	position: absolute;
+	cursor: pointer;
+	background: #063156;
+	border-radius: 5px;
+}
+label #bar{
+	left: 40px;
+	top: 25px;
+	font-size: 25px;
+	padding: 4px 8px;
+	color: #fff;
+	transition: all .5s;
+}
+
+label #time{
+	z-index: 1111;
+	left: -190px;
+	top: 22px;
+	font-size: 20px;
+	padding: 4px 8px;
+	background: #334fa5;
+	color: #fff;
+	transition: .4s;
+}
+#check:checked ~ .sidebar{
+	left: 0;
+}
+#check:checked ~ label #bar{
+	left: 250px;
+	opacity: 0;
+}
+
+#check:checked ~ label #time{
+	left: 190px;
+}
+
+#check:checked ~ section{
+	margin-left: 250px;
+}
+
+section{
+	background: url("../image/image.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	transition: all .7s;
+}
+
+section div{
+	text-align: center;
+	font-size: 50px;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 30px;
+}
